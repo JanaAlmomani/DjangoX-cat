@@ -1,0 +1,12 @@
+{% extends '_base.html' %}
+
+{% block content %}
+
+<h2>Details about {{ cat.name }}</h2>
+<h2>Purchaser: {{ cat.purchaser.first_name }} {{ cat.purchaser.last_name }}</h2>
+<p>{{ cat.cat_type }}</p>
+<a href="{% url 'cat_update' cat.pk %}">+ Update Cat</a>
+<a href="{% url 'cat_delete' cat.pk %}">+ Delete Cat</a>
+
+{% endblock content %}
+
